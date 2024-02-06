@@ -1,0 +1,110 @@
+/* Css for header */
+/* Nav header styles */
+* {
+
+    margin: 0px;
+    
+    padding: 0px;
+    
+    }
+    
+
+.navbar{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px
+}
+
+#logo_text {
+    display: flex;
+    align-items: center;
+    flex-basis: 30%; 
+    gap: 10px;
+}
+
+#index {
+    display: flex;
+    flex-basis: 70%; 
+    justify-content: space-around;
+}
+
+ #clock{
+    width: 90.41px;
+    height:  94.52px;
+ }
+
+ #logo_text a, #index a {
+    color: white; 
+    font-family: 'Inter', sans-serif; 
+    text-decoration: none
+
+}
+
+#logo_text a{
+    font-weight: bold; 
+    font-size: 23px; 
+    text-decoration: none
+
+}
+
+#index a{
+    font-size: 18px;
+    text-decoration: none
+}
+
+/* Css for footer */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#page-footer-1{
+    align-items: center;
+    background-color: black;
+    flex: 8;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-footer-section {
+    padding: 20px;
+    flex: 1;  
+}
+
+#page-footer-section p{
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+
+#page-footer-2{
+    align-items: center;
+    background-color: #87ceeb;
+    flex: 2;
+    display: flex;
+    
+}
+
+#page-footer-2-1 {
+    padding-left: 20px;
+    font-size: 25px;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+#page-footer-2-2 {
+    padding-right: 50px;
+}
+
+#page-footer-section .page-footer-section-head { 
+    font-size: 30px;
+}
