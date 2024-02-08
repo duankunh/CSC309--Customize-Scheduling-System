@@ -52,46 +52,46 @@
                             <th></th>
                             <th></th>
                             <th></th>
-                            <td onclick="showPopup('March 1')" class="busy">1</td>
+                            <td onclick="showPopup('March 1')" class="busy weekends">1</td>
                         </tr>
                         <tr>
-                            <td>2</td>
+                            <td class="weekends">2</td>
                             <td>3</td>
                             <td>4</td>
                             <td>5</td>
                             <td>6</td>
                             <td>7</td>
-                            <td>8</td>
+                            <td class="weekends">8</td>
                         </tr>
                         <tr>
-                            <td class="">9</td>
+                            <td class="weekends">9</td>
                             <td>10</td>
                             <td>11</td>
                             <td>12</td>
                             <td>13</td>
                             <td>14</td>
-                            <td>15</td>
+                            <td class="weekends">15</td>
                         </tr>
                         <tr>
-                            <td>16</td>
+                            <td class="weekends">16</td>
                             <td>17</td>
                             <td>18</td>
                             <td>19</td>
                             <td>20</td>
                             <td>21</td>
-                            <td>22</td>
+                            <td class="weekends">22</td>
                         </tr>
                         <tr>
-                            <td>23</td>
+                            <td class="weekends">23</td>
                             <td>24</td>
                             <td>25</td>
                             <td>26</td>
                             <td>27</td>
                             <td>28</td>
-                            <td>29</td>
+                            <td class="weekends">29</td>
                         </tr>
                         <tr>
-                            <td>30</td>
+                            <td class="weekends">30</td>
                             <td>31</td>
                             <th></th>
                             <th></th>
@@ -104,24 +104,67 @@
                 <div id="popup" class="popup">
                     <h2 id="popupDate"></h2>
                     <p>Schedule for March 1:</p>
-                    <ul>
-                        <li>Meeting 1</li>
-                        <li>Meeting 2</li>
+                    <ul class="meetinglist">
+                        <li>Meeting 1 <span class="meetingtime">9:00 AM - 10:00 AM</span></li> 
+                        <li>Meeting 2 <span class="meetingtime">1:00 PM - 2:00 PM</span></li> 
                         <!-- Add schedule items here -->
                     </ul>
 
-                    <div class = "form">
-                        <!-- New Calendar Form -->
+                    <form id="moveMeetingForm">
+                        <label for="meeting">Meeting</label>
+                        <select id="meeting" name="meeting">
+                            <option value="Meeting 1">Meeting 1</option>
+                            <option value="Meeting 2">Meeting 2</option>
+                        </select>
+                        <label for="moveFrom">Move From:</label>
+                        <select id="moveFrom" name="moveFrom">
+                            <option value="08:00">8:00 AM</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                        </select>
+                        <label for="moveTo">Move To:</label>
+                        <select id="moveTo" name="moveTo">
+                            <option value="08:00">8:00 AM</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                        </select>
+                        <button type="button" onclick="moveMeeting()">Move Meeting</button>
+                    </form>
+
+                    <h3>Schedule New Meeting</h1>
+
                     <form id="calendarForm">
-                        <label for="calendarName">Calendar Name:</label>
+                        <label for="calendarName">Meeting Name:</label>
                         <input type="text" id="calendarName" name="calendarName" required>
-                        <button type="submit">Create Calendar</button>
+                        <button type="submit">Create Meeting</button>
                     </form>
                 
-                    <!-- Calendar Display -->
-                    <div id="calendarDisplay">
-                        <!-- Calendar events will be displayed here -->
-                    </div>
                 
                     <!-- Non-Busy Times Input -->
                     <form id="nonBusyTimesForm">
@@ -172,28 +215,25 @@
                         <button type="button" onclick="addNonBusyTime()">Add</button>
                     </form>
                 
-                    <!-- Display Non-Busy Times -->
+                    <!-- Non-Busy Times -->
                     <div id="nonBusyTimesDisplay">
                         <!-- Non-busy times and preference levels will be displayed here -->
                     </div>
                 
-                    <!-- Move Meeting Time -->
-                    <form id="moveMeetingForm">
-                        <label for="moveFrom">Move From:</label>
-                        <select id="moveFrom" name="moveFrom">
-                            <!-- Options for available meeting times -->
-                        </select>
-                        <label for="moveTo">Move To:</label>
-                        <select id="moveTo" name="moveTo">
-                            <!-- Options for available meeting times -->
-                        </select>
-                        <button type="button" onclick="moveMeeting()">Move Meeting</button>
-                    </form>
-                
-                    <!-- Display Move Results -->
-                    <div id="moveResult">
-                        <!-- Display move results here -->
+                    <!-- Suggested Meeting Time based on other user's availability-->
+                    <div id="suggestedMeetingTime">
+                        <p>Suggested Meeting Time</p>
+                        <div class="suggestedtime">
+                            <span>10:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="suggestedtime">
+                            <span>3:00 PM - 4:00 PM</span>
+                        </div>
+                        <div class="suggestedtime">
+                            <span>6:00 PM - 9:00 PM</span>
+                        </div>
                     </div>
+
                 </div>
                     <button onclick="hidePopup()">Close</button>
                 </div>
