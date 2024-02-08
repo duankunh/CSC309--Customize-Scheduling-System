@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSC 309 P1</title>
-    <link rel="stylesheet"href="Dashboard.css">
+    <link rel="stylesheet"href="Schedule.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,77 +28,11 @@
         <h1>Meeting Scheduler</h1>
 
         <div class="container">
-            <div class = "form">
-                    <!-- New Calendar Form -->
-                <form id="calendarForm">
-                    <label for="calendarName">Calendar Name:</label>
-                    <input type="text" id="calendarName" name="calendarName" required>
-                    <button type="submit">Create Calendar</button>
-                </form>
-            
-                <!-- Calendar Display -->
-                <div id="calendarDisplay">
-                    <!-- Calendar events will be displayed here -->
-                </div>
-            
-                <!-- Non-Busy Times Input -->
-                <form id="nonBusyTimesForm">
-                    <label for="nonBusyTimes">Non-Busy Times:</label>
-                    <select id="nonBusyTimes" name="nonBusyTimes">
-                        <option value="08:00">8:00 AM</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                        <option value="17:00">5:00 PM</option>
-                        <option value="18:00">6:00 PM</option>
-                        <option value="19:00">7:00 PM</option>
-                        <option value="20:00">8:00 PM</option>
-                        <option value="21:00">9:00 PM</option>
-                        <option value="22:00">10:00 PM</option>
-                        <option value="23:00">11:00 PM</option>
-                    </select>
-                    <label for="preferenceLevel">Preference Level:</label>
-                    <select id="preferenceLevel" name="preferenceLevel">
-                        <option value="high">High</option>
-                        <option value="medium">Medium</option>
-                        <option value="low">Low</option>
-                    </select>
-                    <button type="button" onclick="addNonBusyTime()">Add</button>
-                </form>
-            
-                <!-- Display Non-Busy Times -->
-                <div id="nonBusyTimesDisplay">
-                    <!-- Non-busy times and preference levels will be displayed here -->
-                </div>
-            
-                <!-- Move Meeting Time -->
-                <form id="moveMeetingForm">
-                    <label for="moveFrom">Move From:</label>
-                    <select id="moveFrom" name="moveFrom">
-                        <!-- Options for available meeting times -->
-                    </select>
-                    <label for="moveTo">Move To:</label>
-                    <select id="moveTo" name="moveTo">
-                        <!-- Options for available meeting times -->
-                    </select>
-                    <button type="button" onclick="moveMeeting()">Move Meeting</button>
-                </form>
-            
-                <!-- Display Move Results -->
-                <div id="moveResult">
-                    <!-- Display move results here -->
-                </div>
-            </div>
 
             <div class="calendar">
                 <h2>March 2024</h2>
                 
-                <table>
+                <table id="calender">
                     <thead>
                         <tr>
                             <th>Sun</th>
@@ -112,12 +46,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                             <td onclick="showPopup('March 1')" class="busy">1</td>
                         </tr>
                         <tr>
@@ -159,11 +93,10 @@
                         <tr>
                             <td>30</td>
                             <td>31</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </tbody>
                 </table>
@@ -176,12 +109,110 @@
                         <li>Meeting 2</li>
                         <!-- Add schedule items here -->
                     </ul>
+
+                    <div class = "form">
+                        <!-- New Calendar Form -->
+                    <form id="calendarForm">
+                        <label for="calendarName">Calendar Name:</label>
+                        <input type="text" id="calendarName" name="calendarName" required>
+                        <button type="submit">Create Calendar</button>
+                    </form>
+                
+                    <!-- Calendar Display -->
+                    <div id="calendarDisplay">
+                        <!-- Calendar events will be displayed here -->
+                    </div>
+                
+                    <!-- Non-Busy Times Input -->
+                    <form id="nonBusyTimesForm">
+                        <label for="fromNonBusyTimes">Non-Busy Times: From</label>
+                        <select id="fromNonBusyTimes" name="fromNonBusyTimes">
+                            <option value="08:00">8:00 AM</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                        </select>
+                        <label for="toNoBusyTimes">To</label>
+                        <select id="toNonBusyTimes" name="toNonBusyTimes">
+                            <option value="08:00">8:00 AM</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                            <option value="22:00">10:00 PM</option>
+                            <option value="23:00">11:00 PM</option>
+                        </select>
+                        <label for="preferenceLevel">Preference Level:</label>
+                        <select id="preferenceLevel" name="preferenceLevel">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                        <button type="button" onclick="addNonBusyTime()">Add</button>
+                    </form>
+                
+                    <!-- Display Non-Busy Times -->
+                    <div id="nonBusyTimesDisplay">
+                        <!-- Non-busy times and preference levels will be displayed here -->
+                    </div>
+                
+                    <!-- Move Meeting Time -->
+                    <form id="moveMeetingForm">
+                        <label for="moveFrom">Move From:</label>
+                        <select id="moveFrom" name="moveFrom">
+                            <!-- Options for available meeting times -->
+                        </select>
+                        <label for="moveTo">Move To:</label>
+                        <select id="moveTo" name="moveTo">
+                            <!-- Options for available meeting times -->
+                        </select>
+                        <button type="button" onclick="moveMeeting()">Move Meeting</button>
+                    </form>
+                
+                    <!-- Display Move Results -->
+                    <div id="moveResult">
+                        <!-- Display move results here -->
+                    </div>
+                </div>
                     <button onclick="hidePopup()">Close</button>
                 </div>
             </div>
+
+            <div class=annotation>
+                <div class="square"></div>
+                <a>non-busy time</a>
+            </div>
+
         </div>
 
         <script>
+            document.getElementById("calender").addEventListener("click", function(event) {
+                if (event.target.tagName === "TD") {
+                    showPopup("March " + event.target.textContent);
+                }
+            });
+
             // JS Function to show the popup with the schedule for the clicked date
             function showPopup(date) {
                 document.getElementById("popupDate").textContent = date;

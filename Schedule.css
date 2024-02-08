@@ -107,3 +107,110 @@ footer{
 #page-footer-section .page-footer-section-head { 
     font-size: 30px;
 }
+  
+form {
+  margin: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #87CEEB;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.annotation {
+  flex: 1;
+  margin: 1rem;
+}
+
+.calendar {
+  margin: 1rem;
+  text-align: right;
+}
+.calendar table {
+  border-collapse: collapse;
+  background-color: wheat;
+  border: none;
+  border-radius: 10px;
+}
+.calendar th{
+    border: 1px solid black;
+    padding: 3rem;
+    text-align: center;
+    border: none;
+    font-size: large;
+}
+
+.calendar td {
+  border: 1px solid black;
+  padding: 3rem;
+  text-align: center;
+  border: none;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+}
+
+.calendar td:hover {
+    background-color: rgb(0, 129, 172); /* Change color on hover */
+}
+
+.popup {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 999; 
+  text-align: left;
+}
+
+.busy {
+  background-color: #FFD8DA;
+  background-size: 75% 75%;
+}
+
+.busy {
+    background-color: #FFD8DA;
+    background-size: 75% 75%;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: #FFD8DA;
+  }
