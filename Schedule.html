@@ -44,7 +44,24 @@
                 <!-- Non-Busy Times Input -->
                 <form id="nonBusyTimesForm">
                     <label for="nonBusyTimes">Non-Busy Times:</label>
-                    <input type="text" id="nonBusyTimes" name="nonBusyTimes" placeholder="Enter non-busy times">
+                    <select id="nonBusyTimes" name="nonBusyTimes">
+                        <option value="08:00">8:00 AM</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                        <option value="23:00">11:00 PM</option>
+                    </select>
                     <label for="preferenceLevel">Preference Level:</label>
                     <select id="preferenceLevel" name="preferenceLevel">
                         <option value="high">High</option>
@@ -101,7 +118,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>1</td>
+                            <td onclick="showPopup('March 1')" class="busy">1</td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -113,7 +130,7 @@
                             <td>8</td>
                         </tr>
                         <tr>
-                            <td>9</td>
+                            <td class="">9</td>
                             <td>10</td>
                             <td>11</td>
                             <td>12</td>
@@ -150,8 +167,32 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <div id="popup" class="popup">
+                    <h2 id="popupDate"></h2>
+                    <p>Schedule for March 1:</p>
+                    <ul>
+                        <li>Meeting 1</li>
+                        <li>Meeting 2</li>
+                        <!-- Add schedule items here -->
+                    </ul>
+                    <button onclick="hidePopup()">Close</button>
+                </div>
             </div>
         </div>
+
+        <script>
+            // JS Function to show the popup with the schedule for the clicked date
+            function showPopup(date) {
+                document.getElementById("popupDate").textContent = date;
+                document.getElementById("popup").style.display = "block";
+            }
+    
+            // JS Function to hide the popup
+            function hidePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+        </script>
         
     
           

@@ -3,9 +3,8 @@
 * {
 
     margin: 0px;
-    
     padding: 0px;
-    
+    font-family: 'Outfit', sans-serif;
     }
     
 
@@ -110,7 +109,7 @@ footer{
 }
   
 form {
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 label {
@@ -126,8 +125,8 @@ input[type="text"] {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #87CEEB;
+  color: #000000;
   border: none;
   cursor: pointer;
 }
@@ -150,13 +149,40 @@ li {
 }
 .calendar {
   flex: 1;
-  margin: 3rem;
+  margin: 1rem;
 }
 .calendar table {
   border-collapse: collapse;
+  background-color: wheat;
+  border: none;
+  border-radius: 10px;
 }
 .calendar th, .calendar td {
   border: 1px solid black;
-  padding: 8px;
+  padding: 20px;
   text-align: center;
+  border: none;
+}
+
+.calendar td {
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+}
+
+.popup {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 999; 
+}
+
+.busy {
+  background-color: #89EAFF;
+  background-size: 75% 75%;
 }
