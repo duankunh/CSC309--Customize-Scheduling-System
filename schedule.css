@@ -1,0 +1,325 @@
+/* Css for header */
+/* Nav header styles */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Outfit", sans-serif;
+}
+
+.navbar {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#logo_text {
+  display: flex;
+  align-items: center;
+  flex-basis: 30%;
+  gap: 10px;
+}
+
+#index {
+  display: flex;
+  flex-basis: 70%;
+  justify-content: space-around;
+}
+
+#clock {
+  width: 90.41px;
+  height: 94.52px;
+}
+
+#logo_text a,
+#index a {
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+#logo_text a {
+  font-weight: bold;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+#index a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Css for footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 3rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#page-footer-1 {
+  align-items: center;
+  background-color: black;
+  flex: 8;
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-footer-section {
+  padding: 20px;
+  flex: 1;
+}
+
+#page-footer-section p {
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+}
+
+#page-footer-2 {
+  align-items: center;
+  background-color: #87ceeb;
+  flex: 2;
+  display: flex;
+}
+
+#page-footer-2-1 {
+  padding-left: 20px;
+  font-size: 25px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#page-footer-2-2 {
+  padding-right: 50px;
+}
+
+#page-footer-section .page-footer-section-head {
+  font-size: 30px;
+}
+
+form {
+  margin: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #87ceeb;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.meetinglist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.meetinglist li {
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.annotation {
+  flex: 1;
+  margin: 1rem;
+}
+
+.calendar {
+  margin: 1rem;
+  text-align: right;
+}
+.calendar table {
+  border-collapse: collapse;
+  background-color: wheat;
+  border: none;
+  border-radius: 10px;
+}
+.calendar th {
+  border: 1px solid black;
+  padding: 3rem;
+  text-align: center;
+  border: none;
+  font-size: larger;
+}
+
+.calendar td {
+  border: 1px solid black;
+  padding: 3rem;
+  text-align: center;
+  border: none;
+  font-size: small;
+  border: none;
+  border-radius: 10px;
+}
+
+.calendar td:hover {
+  background-color: rgb(0, 129, 172);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(228, 246, 247);
+  padding: 20px;
+  border: none;
+  z-index: 999;
+  text-align: left;
+  border-radius: 10px;
+}
+
+select {
+  border: none;
+}
+
+text .meetingtime {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.suggestedtime {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.busy {
+  background-color: #ffd8da;
+  background-size: 75% 75%;
+}
+
+.weekends {
+  color: darkgreen;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: #ffd8da;
+}
+
+/* generated schedule popup */
+#generate-schedules-button {
+  height: 50px;
+}
+
+#generated-schedules-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.generated-schedules-popup-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generated-schedules-popup-slides {
+  max-width: 1000px;
+  position: relative;
+  height: 90%;
+  margin: auto;
+  /* padding: 20px; */
+  background-color: #fefefe;
+}
+
+.generated-schedules-popup-inner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generated-calendar td:hover {
+  background-color: wheat;
+}
+
+.generated-calendar {
+  transform: scale(0.7);
+}
+
+.generated-calendar-slide {
+  display: none;
+}
+
+.generated-schedule-popup-close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.generated-schedule-popup-close:hover,
+.generated-schedule-popup-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.generated-schedule-popup-prev,
+.generated-schedule-popup-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.generated-schedule-popup-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.generated-schedule-popup-prev:hover,
+.generated-schedule-popup-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
