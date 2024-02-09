@@ -262,6 +262,7 @@ text .meetingtime {
   margin: auto;
   /* padding: 20px; */
   background-color: #fefefe;
+  border-radius: 10px;
 }
 
 .generated-schedules-popup-inner-content {
@@ -306,19 +307,32 @@ text .meetingtime {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+}
+
+.generated-schedule-popup-prev {
+  left: -50px;
+  border-radius: 3px 0 0 3px;
 }
 
 .generated-schedule-popup-next {
-  right: 0;
+  right: -50px;
   border-radius: 3px 0 0 3px;
 }
 
 .generated-schedule-popup-prev:hover,
 .generated-schedule-popup-next:hover {
-  background-color: rgba(162, 158, 158, 0.8);
+  transform: scale(1.3);
+}
+
+#select-generated-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  /* center the button */
+  width: 60%;
 }
