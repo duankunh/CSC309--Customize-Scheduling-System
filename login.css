@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #e6e6e6; /* Light blue background */
+    background-color: #e6e6e6; 
 }
 
 .login-container {
@@ -60,7 +60,7 @@ body, html {
 
 .login-help a {
     text-decoration: none;
-    color: #0044cc; /* Dark blue text to match the button */
+    color: #0044cc; 
     font-size: 14px;
 }
 
