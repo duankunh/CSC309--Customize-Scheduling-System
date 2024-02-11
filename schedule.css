@@ -229,7 +229,8 @@ text .meetingtime {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  /* center the button */
-  width: 60%;
+  margin: auto;
+  cursor: pointer;
+  width: 800px;
 }
+
