@@ -12,401 +12,403 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar__logo">
-                <img class="nabar__logo__image" src="header-footer img/clock.png">
-                <a href="home.html" class="navbar__logo__text">BESTSCHEDULE</a>
-            </div>
-            <div class="navbar__links">
-                <a href="contacts.html" class="navbar__nav-link">Contacts</a>
-                <a href="Schedule.html" class="navbar__nav-link navbar__nav-link--active">Schedule</a>
-                <a href="#" class="navbar__nav-link">Logout</a>
-            </div>
-        </nav>
-    </header>
+    <div id="page-container">
+        <div id="page-wrapper">
+            <header>
+                <nav class="navbar">
+                    <div class="navbar__logo">
+                        <img class="nabar__logo__image" src="header-footer img/clock.png">
+                        <a href="home.html" class="navbar__logo__text">BESTSCHEDULE</a>
+                    </div>
+                    <div class="navbar__links">
+                        <a href="contacts.html" class="navbar__nav-link">Contacts</a>
+                        <a href="Schedule.html" class="navbar__nav-link navbar__nav-link--active">Schedule</a>
+                        <a href="#" class="navbar__nav-link">Logout</a>
+                    </div>
+                </nav>
+            </header>
 
-    <main>
-        <h1>Meeting Scheduler</h1>
+            <main>
+                <h1>Meeting Scheduler</h1>
 
-        <div class="container">
+                <div class="container">
 
-            <div class="calendar">
-                <h2>March 2024</h2>
+                    <div class="calendar">
+                        <h2>March 2024</h2>
 
-                <table id="calender">
-                    <thead>
-                        <tr>
-                            <th>Sun</th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <td onclick="showPopup('March 1')" class="busy weekends">1</td>
-                        </tr>
-                        <tr>
-                            <td class="weekends">2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td class="weekends">8</td>
-                        </tr>
-                        <tr>
-                            <td class="weekends">9</td>
-                            <td>10</td>
-                            <td>11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td class="weekends">15</td>
-                        </tr>
-                        <tr>
-                            <td class="weekends">16</td>
-                            <td>17</td>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td class="weekends">22</td>
-                        </tr>
-                        <tr>
-                            <td class="weekends">23</td>
-                            <td>24</td>
-                            <td>25</td>
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td class="weekends">29</td>
-                        </tr>
-                        <tr>
-                            <td class="weekends">30</td>
-                            <td>31</td>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="popup" class="popup">
-                <h2 id="popupDate"></h2>
-                <p>Schedule for March 1:</p>
-                <ul class="meetinglist">
-                    <li>Meeting 1 <span class="meetingtime">9:00 AM - 10:00 AM</span></li>
-                    <li>Meeting 2 <span class="meetingtime">1:00 PM - 2:00 PM</span></li>
-                    <!-- Add schedule items here -->
-                </ul>
-
-                <form id="moveMeetingForm">
-                    <label for="meeting">Meeting</label>
-                    <select id="meeting" name="meeting">
-                        <option value="Meeting 1">Meeting 1</option>
-                        <option value="Meeting 2">Meeting 2</option>
-                    </select>
-                    <label for="moveFrom">Move From:</label>
-                    <select id="moveFrom" name="moveFrom">
-                        <option value="08:00">8:00 AM</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                        <option value="17:00">5:00 PM</option>
-                        <option value="18:00">6:00 PM</option>
-                        <option value="19:00">7:00 PM</option>
-                        <option value="20:00">8:00 PM</option>
-                        <option value="21:00">9:00 PM</option>
-                        <option value="22:00">10:00 PM</option>
-                        <option value="23:00">11:00 PM</option>
-                    </select>
-                    <label for="moveTo">Move To:</label>
-                    <select id="moveTo" name="moveTo">
-                        <option value="08:00">8:00 AM</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                        <option value="17:00">5:00 PM</option>
-                        <option value="18:00">6:00 PM</option>
-                        <option value="19:00">7:00 PM</option>
-                        <option value="20:00">8:00 PM</option>
-                        <option value="21:00">9:00 PM</option>
-                        <option value="22:00">10:00 PM</option>
-                        <option value="23:00">11:00 PM</option>
-                    </select>
-                    <button type="button" onclick="moveMeeting()">Move Meeting</button>
-                </form>
-
-                <h3>Schedule New Meeting</h1>
-
-                    <form id="calendarForm">
-                        <label for="calendarName">Meeting Name:</label>
-                        <input type="text" id="calendarName" name="calendarName" required>
-                        <button type="submit">Create Meeting</button>
-                    </form>
-
-
-                    <!-- Non-Busy Times Input -->
-                    <form id="nonBusyTimesForm">
-                        <label for="fromNonBusyTimes">Non-Busy Times: From</label>
-                        <select id="fromNonBusyTimes" name="fromNonBusyTimes">
-                            <option value="08:00">8:00 AM</option>
-                            <option value="09:00">9:00 AM</option>
-                            <option value="10:00">10:00 AM</option>
-                            <option value="11:00">11:00 AM</option>
-                            <option value="12:00">12:00 PM</option>
-                            <option value="13:00">1:00 PM</option>
-                            <option value="14:00">2:00 PM</option>
-                            <option value="15:00">3:00 PM</option>
-                            <option value="16:00">4:00 PM</option>
-                            <option value="17:00">5:00 PM</option>
-                            <option value="18:00">6:00 PM</option>
-                            <option value="19:00">7:00 PM</option>
-                            <option value="20:00">8:00 PM</option>
-                            <option value="21:00">9:00 PM</option>
-                            <option value="22:00">10:00 PM</option>
-                            <option value="23:00">11:00 PM</option>
-                        </select>
-                        <label for="toNoBusyTimes">To</label>
-                        <select id="toNonBusyTimes" name="toNonBusyTimes">
-                            <option value="08:00">8:00 AM</option>
-                            <option value="09:00">9:00 AM</option>
-                            <option value="10:00">10:00 AM</option>
-                            <option value="11:00">11:00 AM</option>
-                            <option value="12:00">12:00 PM</option>
-                            <option value="13:00">1:00 PM</option>
-                            <option value="14:00">2:00 PM</option>
-                            <option value="15:00">3:00 PM</option>
-                            <option value="16:00">4:00 PM</option>
-                            <option value="17:00">5:00 PM</option>
-                            <option value="18:00">6:00 PM</option>
-                            <option value="19:00">7:00 PM</option>
-                            <option value="20:00">8:00 PM</option>
-                            <option value="21:00">9:00 PM</option>
-                            <option value="22:00">10:00 PM</option>
-                            <option value="23:00">11:00 PM</option>
-                        </select>
-                        <label for="preferenceLevel">Preference Level:</label>
-                        <select id="preferenceLevel" name="preferenceLevel">
-                            <option value="high">High</option>
-                            <option value="medium">Medium</option>
-                            <option value="low">Low</option>
-                        </select>
-                        <button type="button" onclick="addNonBusyTime()">Add</button>
-                    </form>
-
-                    <!-- Non-Busy Times -->
-                    <div id="nonBusyTimesDisplay">
-                        <!-- Non-busy times and preference levels will be displayed here -->
+                        <table id="calender">
+                            <thead>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <td onclick="showPopup('March 1')" class="busy weekends">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="weekends">2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td class="weekends">8</td>
+                                </tr>
+                                <tr>
+                                    <td class="weekends">9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td class="weekends">15</td>
+                                </tr>
+                                <tr>
+                                    <td class="weekends">16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td class="weekends">22</td>
+                                </tr>
+                                <tr>
+                                    <td class="weekends">23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td class="weekends">29</td>
+                                </tr>
+                                <tr>
+                                    <td class="weekends">30</td>
+                                    <td>31</td>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <!-- Suggested Meeting Time based on other user's availability-->
-                    <div id="suggestedMeetingTime">
-                        <p>Suggested Meeting Time</p>
-                        <div class="suggestedtime">
-                            <span>10:00 AM - 12:00 PM</span>
-                        </div>
-                        <div class="suggestedtime">
-                            <span>3:00 PM - 4:00 PM</span>
-                        </div>
-                        <div class="suggestedtime">
-                            <span>6:00 PM - 9:00 PM</span>
-                        </div>
-                    </div>
+                    <div id="popup" class="popup">
+                        <h2 id="popupDate"></h2>
+                        <p>Schedule for March 1:</p>
+                        <ul class="meetinglist">
+                            <li>Meeting 1 <span class="meetingtime">9:00 AM - 10:00 AM</span></li>
+                            <li>Meeting 2 <span class="meetingtime">1:00 PM - 2:00 PM</span></li>
+                            <!-- Add schedule items here -->
+                        </ul>
 
-                    <button onclick="hidePopup()">Close</button>
-            </div>
+                        <form id="moveMeetingForm">
+                            <label for="meeting">Meeting</label>
+                            <select id="meeting" name="meeting">
+                                <option value="Meeting 1">Meeting 1</option>
+                                <option value="Meeting 2">Meeting 2</option>
+                            </select>
+                            <label for="moveFrom">Move From:</label>
+                            <select id="moveFrom" name="moveFrom">
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                                <option value="23:00">11:00 PM</option>
+                            </select>
+                            <label for="moveTo">Move To:</label>
+                            <select id="moveTo" name="moveTo">
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                                <option value="23:00">11:00 PM</option>
+                            </select>
+                            <button type="button" onclick="moveMeeting()">Move Meeting</button>
+                        </form>
 
-            <button id="generate-schedules-button">Generate Schedules</button>
-            <div id="generated-schedules-popup">
-                <div class="generated-schedules-popup-content">
-                    <div class="generated-schedules-popup-slides">
-                        <span class="generated-schedule-popup-close">&times;</span>
-                        <div class="generated-calendar-slide fade">
-                            <div class="generated-schedules-popup-inner-content">
-                                <div class="generated-schedules-compatability-lists">
-                                    <div>
-                                        <h3>Compatible Times</h3>
-                                        <ul>
-                                            <li>Person A: times</li>
-                                            <li>Person B: times</li>
-                                        </ul>
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <h3>Conflicting Times</h3>
-                                        <ul>
-                                            <li>Person C: times</li>
-                                            <li>Person D: times</li>
-                                        </ul>
-                                    </div>
+                        <h3>Schedule New Meeting</h1>
+
+                            <form id="calendarForm">
+                                <label for="calendarName">Meeting Name:</label>
+                                <input type="text" id="calendarName" name="calendarName" required>
+                                <button type="submit">Create Meeting</button>
+                            </form>
+
+
+                            <!-- Non-Busy Times Input -->
+                            <form id="nonBusyTimesForm">
+                                <label for="fromNonBusyTimes">Non-Busy Times: From</label>
+                                <select id="fromNonBusyTimes" name="fromNonBusyTimes">
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                    <option value="22:00">10:00 PM</option>
+                                    <option value="23:00">11:00 PM</option>
+                                </select>
+                                <label for="toNoBusyTimes">To</label>
+                                <select id="toNonBusyTimes" name="toNonBusyTimes">
+                                    <option value="08:00">8:00 AM</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                    <option value="22:00">10:00 PM</option>
+                                    <option value="23:00">11:00 PM</option>
+                                </select>
+                                <label for="preferenceLevel">Preference Level:</label>
+                                <select id="preferenceLevel" name="preferenceLevel">
+                                    <option value="high">High</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                                <button type="button" onclick="addNonBusyTime()">Add</button>
+                            </form>
+
+                            <!-- Non-Busy Times -->
+                            <div id="nonBusyTimesDisplay">
+                                <!-- Non-busy times and preference levels will be displayed here -->
+                            </div>
+
+                            <!-- Suggested Meeting Time based on other user's availability-->
+                            <div id="suggestedMeetingTime">
+                                <p>Suggested Meeting Time</p>
+                                <div class="suggestedtime">
+                                    <span>10:00 AM - 12:00 PM</span>
                                 </div>
-                                <div class="calendar generated-calendar">
-                                    <h2>March 2024</h2>
-                                    <table id="calender">
-                                        <thead>
-                                            <tr>
-                                                <th>Sun</th>
-                                                <th>Mon</th>
-                                                <th>Tue</th>
-                                                <th>Wed</th>
-                                                <th>Thu</th>
-                                                <th>Fri</th>
-                                                <th>Sat</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="weekends">2</td>
-                                                <td>3</td>
-                                                <td>4</td>
-                                                <td>5</td>
-                                                <td>6</td>
-                                                <td>7</td>
-                                                <td class="weekends">8</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="weekends">9</td>
-                                                <td>10</td>
-                                                <td>11</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>14</td>
-                                                <td class="weekends">15</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="weekends">16</td>
-                                                <td>17</td>
-                                                <td>18</td>
-                                                <td>19</td>
-                                                <td>20</td>
-                                                <td>21</td>
-                                                <td class="weekends">22</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="weekends">23</td>
-                                                <td>24</td>
-                                                <td>25</td>
-                                                <td>26</td>
-                                                <td>27</td>
-                                                <td>28</td>
-                                                <td class="weekends">29</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="weekends">30</td>
-                                                <td>31</td>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="suggestedtime">
+                                    <span>3:00 PM - 4:00 PM</span>
+                                </div>
+                                <div class="suggestedtime">
+                                    <span>6:00 PM - 9:00 PM</span>
                                 </div>
                             </div>
+
+                            <button onclick="hidePopup()">Close</button>
+                    </div>
+
+                    <button id="generate-schedules-button">Generate Schedules</button>
+                    <div id="generated-schedules-popup">
+                        <div class="generated-schedules-popup-content">
+                            <div class="generated-schedules-popup-slides">
+                                <span class="generated-schedule-popup-close">&times;</span>
+                                <div class="generated-calendar-slide fade">
+                                    <div class="generated-schedules-popup-inner-content">
+                                        <div class="generated-schedules-compatability-lists">
+                                            <div>
+                                                <h3>Compatible Times</h3>
+                                                <ul>
+                                                    <li>Person A: times</li>
+                                                    <li>Person B: times</li>
+                                                </ul>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h3>Conflicting Times</h3>
+                                                <ul>
+                                                    <li>Person C: times</li>
+                                                    <li>Person D: times</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="calendar generated-calendar">
+                                            <h2>March 2024</h2>
+                                            <table id="calender">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thu</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekends">2</td>
+                                                        <td>3</td>
+                                                        <td>4</td>
+                                                        <td>5</td>
+                                                        <td>6</td>
+                                                        <td>7</td>
+                                                        <td class="weekends">8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekends">9</td>
+                                                        <td>10</td>
+                                                        <td>11</td>
+                                                        <td>12</td>
+                                                        <td>13</td>
+                                                        <td>14</td>
+                                                        <td class="weekends">15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekends">16</td>
+                                                        <td>17</td>
+                                                        <td>18</td>
+                                                        <td>19</td>
+                                                        <td>20</td>
+                                                        <td>21</td>
+                                                        <td class="weekends">22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekends">23</td>
+                                                        <td>24</td>
+                                                        <td>25</td>
+                                                        <td>26</td>
+                                                        <td>27</td>
+                                                        <td>28</td>
+                                                        <td class="weekends">29</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="weekends">30</td>
+                                                        <td>31</td>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="generated-calendar-slide fade">
+                                    <!-- generate more slides with js -->
+                                </div>
+                                <a class="generated-schedule-popup-prev">&#10094;</a>
+                                <a class="generated-schedule-popup-next">&#10095;</a>
+                            </div>
                         </div>
-                        <div class="generated-calendar-slide fade">
-                            <!-- generate more slides with js -->
-                        </div>
-                        <a class="generated-schedule-popup-prev">&#10094;</a>
-                        <a class="generated-schedule-popup-next">&#10095;</a>
+                        <button id="select-generated-schedule">Select Schedule</button>
                     </div>
                 </div>
-                <button id="select-generated-schedule">Select Schedule</button>
-            </div>
+
+                <div class=annotation>
+                    <div class="square"></div>
+                    <a>non-busy time</a>
+                </div>
+                <script>
+                    document.getElementById("calender").addEventListener("click", function (event) {
+                        if (event.target.tagName === "TD") {
+                            showPopup("March " + event.target.textContent);
+                        }
+                    });
+
+                    // JS Function to show the popup with the schedule for the clicked date
+                    function showPopup(date) {
+                        document.getElementById("popupDate").textContent = date;
+                        document.getElementById("popup").style.display = "block";
+                    }
+
+                    // JS Function to hide the popup
+                    function hidePopup() {
+                        document.getElementById("popup").style.display = "none";
+                    }
+                </script>
+            </main>
+
         </div>
-
-        <div class=annotation>
-            <div class="square"></div>
-            <a>non-busy time</a>
-        </div>
-
-        </div>
-
-        <script>
-            document.getElementById("calender").addEventListener("click", function (event) {
-                if (event.target.tagName === "TD") {
-                    showPopup("March " + event.target.textContent);
-                }
-            });
-
-            // JS Function to show the popup with the schedule for the clicked date
-            function showPopup(date) {
-                document.getElementById("popupDate").textContent = date;
-                document.getElementById("popup").style.display = "block";
-            }
-
-            // JS Function to hide the popup
-            function hidePopup() {
-                document.getElementById("popup").style.display = "none";
-            }
-        </script>
-    </main>
-
-    <footer id="footer">
-        <div id="footer-1">
-            <div class="footer-1__col">
-                <p class="footer-1__col__row footer-1--header">Contact</p>
-                <p class="footer-1__col__row">Sign up for free</p>
-                <p class="footer-1__col__row">Talk to sales</p>
-                <p class="footer-1__col__row">Help center</p>
+        <footer id="footer">
+            <div id="footer-1">
+                <div class="footer-1__col">
+                    <p class="footer-1__col__row footer-1--header">Contact</p>
+                    <p class="footer-1__col__row">Sign up for free</p>
+                    <p class="footer-1__col__row">Talk to sales</p>
+                    <p class="footer-1__col__row">Help center</p>
+                </div>
+                <div class="footer-1__col">
+                    <p class="footer-1__col__row footer-1--header">Company</p>
+                    <p class="footer-1__col__row">Customers</p>
+                    <p class="footer-1__col__row">About us</p>
+                    <p class="footer-1__col__row">Careers</p>
+                </div>
+                <div class="footer-1__col">
+                    <p class="footer-1__col__row footer-1--header">Downloads</p>
+                    <p class="footer-1__col__row">IOS</p>
+                    <p class="footer-1__col__row">Android</p>
+                    <p class="footer-1__col__row">Windows</p>
+                </div>
+                <div class="footer-1__col">
+                    <p class="footer-1__col__row footer-1--header">Resources</p>
+                    <p class="footer-1__col__row">Blog</p>
+                    <p class="footer-1__col__row">Community</p>
+                    <p class="footer-1__col__row">Become a Partner</p>
+                </div>
             </div>
-            <div class="footer-1__col">
-                <p class="footer-1__col__row footer-1--header">Company</p>
-                <p class="footer-1__col__row">Customers</p>
-                <p class="footer-1__col__row">About us</p>
-                <p class="footer-1__col__row">Careers</p>
+            <div id="page-footer-2">
+                <div id="page-footer-2-1">Follow our social media for newest Update!</div>
+                <div id = "page-footer-2-2"><img src = "header-footer img/social label.png"></div>
             </div>
-            <div class="footer-1__col">
-                <p class="footer-1__col__row footer-1--header">Downloads</p>
-                <p class="footer-1__col__row">IOS</p>
-                <p class="footer-1__col__row">Android</p>
-                <p class="footer-1__col__row">Windows</p>
-            </div>
-            <div class="footer-1__col">
-                <p class="footer-1__col__row footer-1--header">Resources</p>
-                <p class="footer-1__col__row">Blog</p>
-                <p class="footer-1__col__row">Community</p>
-                <p class="footer-1__col__row">Become a Partner</p>
-            </div>
-        </div>
-        <div id="page-footer-2">
-            <div id="page-footer-2-1">Follow our social media for newest Update!</div>
-            <div id = "page-footer-2-2"><img src = "header-footer img/social label.png"></div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 
     <script src="generated-schedules-popup.js"></script>
 
