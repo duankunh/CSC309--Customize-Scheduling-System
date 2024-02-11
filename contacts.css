@@ -93,3 +93,21 @@
     border: none;
     cursor: pointer;
 }
+
+
+.contacts-table__body__row__contact-edit-button:hover {
+    background-color: #0056b3; 
+}
+
+.contacts-table__body__row__contact-delete-button {
+    padding: 10px 20px;
+    background-color: #ff004c;
+    width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.contacts-table__body__row__contact-delete-button:hover {
+    background-color: #cc003a;}

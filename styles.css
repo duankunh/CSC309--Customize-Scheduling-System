@@ -136,6 +136,36 @@ body {
     font-size: 30px;
 }
 
+/* media quries for header */
+/* Existing CSS above */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar__logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar__links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__nav-link {
+        padding: 10px 0; 
+        width: 100%;
+        text-align: center; 
+    }
+}
+
+
+/* media quries for footer */
 @media screen and (max-width: 850px) {
     .footer-1__col {
         width: calc(50% - 20px);
@@ -147,3 +177,4 @@ body {
         width: calc(100% - 20px); 
     }
 }
+

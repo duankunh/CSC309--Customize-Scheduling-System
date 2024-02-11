@@ -233,3 +233,76 @@ text .meetingtime {
   /* center the button */
   width: 60%;
 }
+
+
+
+@media (max-width: 768px) {
+  .calendar table {
+    width: 100%;
+    table-layout: fixed; 
+  }
+
+  .calendar th, .calendar td {
+    padding: 1rem; 
+  }
+
+  .container {
+    flex-direction: column; 
+  }
+
+  .annotation {
+    order: -1; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .calendar th, .calendar td {
+    padding: 0.5rem;
+    font-size: smaller; 
+  }
+
+  .popup,
+  .generated-schedules-popup-content {
+    width: 90%; 
+    left: 5%;
+    transform: translate(0, -50%); 
+  }
+
+  .generated-calendar {
+    transform: scale(0.5); 
+  }
+
+  .square {
+    height: 25px; 
+    width: 25px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  input[type="text"], select {
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  button, .generated-schedule-popup-prev, .generated-schedule-popup-next {
+    padding: 8px 16px; 
+    font-size: smaller; 
+  }
+}
+
+@media (max-width: 360px) {
+  .calendar {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .generated-schedule-popup-close {
+    top: 10px;
+    right: 15px; 
+    font-size: 28px; 
+  }
+}

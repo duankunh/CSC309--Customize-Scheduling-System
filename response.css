@@ -253,3 +253,77 @@ p {
         font-size: 16px;
         margin: 0 20px;
     }
+
+
+@media (max-width: 768px) {
+    .response__content__inviter-schedule,
+    .time_within_days {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .calendar-grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  
+    .calendar,
+    .invite-schedule-container {
+      width: 100%; 
+      box-shadow: none; 
+    }
+  
+    .month-indicator,
+    .invite-week-indicator {
+      font-size: 16px; 
+    }
+  
+    .day,
+    .day-name {
+      padding: 5px; 
+    }
+  
+    .invite-time-slot,
+    .time-slot {
+      width: auto;
+      margin: 5px 0; 
+    }
+  
+    .response__content__invitee_button {
+      flex-direction: column;
+    }
+  
+    .edit-button,
+    .edit-button-2 {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .response__content__inviter-info h2,
+    .response__content__inviter-info p,
+    .invite-day h3 {
+      font-size: smaller; 
+    }
+  
+    .calendar-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .main_content_top_section_text h1:first-of-type,
+    .main_content_middle_section_text h1 {
+      font-size: smaller; 
+    }
+  
+    .main_content_top_section_text p:first-of-type,
+    .main_content_middle_section_text p {
+      font-size: smaller; 
+    }
+  
+    .main_content_top_section_text_button button,
+    .main_content_middle_section_text_button button {
+      padding: 5px 10px;
+      font-size: smaller; 
+    }
+  }
+  
