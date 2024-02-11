@@ -41,3 +41,23 @@ document.querySelector(".generated-schedule-popup-prev").addEventListener('click
 document.querySelector(".generated-schedule-popup-next").addEventListener('click', function () {
   plusSlides(1);
 });
+
+var popup = document.getElementById("popupScheduledMeetings");
+
+var btn = document.getElementById("openScheduledMeetings");
+
+var span = document.getElementsByClassName("close-btn")[0];
+
+btn.onclick = function () {
+  popup.style.display = "block";
+}
+
+span.onclick = function () {
+  popup.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}

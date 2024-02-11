@@ -245,8 +245,8 @@
 
                     <button id="generate-schedules-button">Generate Schedules</button>
                     <div id="generated-schedules-popup">
-                        <div class="generated-schedules-popup-content">
-                            <div class="generated-schedules-popup-slides">
+                        <div class="generated-schedules-popup-slides">
+                            <div class="generated-schedules-popup-content">
                                 <span class="generated-schedule-popup-close">&times;</span>
                                 <div class="generated-calendar-slide fade">
                                     <div class="generated-schedules-popup-inner-content">
@@ -254,21 +254,22 @@
                                             <div>
                                                 <h3>Compatible Times</h3>
                                                 <ul>
-                                                    <li>Person A: times</li>
-                                                    <li>Person B: times</li>
+                                                    <li><strong>Person A:</strong> March 1st @ 12:00pm - 1:00pm</li>
+                                                    <li><strong>Person A:</strong> March 1st @ 1:00pm - 2:00pm</li>
                                                 </ul>
                                             </div>
                                             <br>
                                             <div>
                                                 <h3>Conflicting Times</h3>
                                                 <ul>
-                                                    <li>Person C: times</li>
-                                                    <li>Person D: times</li>
+                                                    <li><strong>Person C:</strong> March 1st @ 2:00pm - 3:00pm</li>
+                                                    <li><strong>Person D:</strong> March 1st @ 3:00pm - 4:00pm</li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="calendar generated-calendar">
                                             <h2>March 2024</h2>
+
                                             <table id="calender">
                                                 <thead>
                                                     <tr>
@@ -289,7 +290,7 @@
                                                         <th></th>
                                                         <th></th>
                                                         <th></th>
-                                                        <td>1</td>
+                                                        <td id="openScheduledMeetings" class="busy weekends">1</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="weekends">2</td>
@@ -338,6 +339,24 @@
                                                 </tbody>
                                             </table>
                                         </div>
+
+
+                                        <div id="popupScheduledMeetings" class="popupScheduledMeetings">
+                                            <div class="popup-scheduled-meetings-content">
+                                                <span class="close-btn">&times;</span>
+                                                <h2>March 1st Meetings</h2>
+                                                <p>Person A: 12:00pm - 1:00pm</p>
+                                                <p>Person B: 1:00pm - 2:00pm</p>
+                                                <p style="color: red">Person C: 2:00pm - 3:00pm</p>
+                                                <p style="color: red">Person D: 3:00pm - 4:00pm</p>
+                                                <!-- Add more content here as needed -->
+                                            </div>
+                                        </div>
+
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="generated-calendar-slide fade">
@@ -345,9 +364,11 @@
                                 </div>
                                 <a class="generated-schedule-popup-prev">&#10094;</a>
                                 <a class="generated-schedule-popup-next">&#10095;</a>
+                                <div class="select-generated-schedule-button">
+                                    <button id="select-generated-schedule">Select Schedule</button>
+                                </div>
                             </div>
                         </div>
-                        <button id="select-generated-schedule">Select Schedule</button>
                     </div>
                 </div>
 
@@ -409,10 +430,11 @@
             </div>
             <div id="page-footer-2">
                 <div id="page-footer-2-1">Follow our social media for newest Update!</div>
-                <div id = "page-footer-2-2"><img src = "header-footer img/social label.png"></div>
+                <div id="page-footer-2-2"><img src="header-footer img/social label.png"></div>
             </div>
         </footer>
     </div>
     <script src="generated-schedules-popup.js"></script>
 </body>
+
 </html>
