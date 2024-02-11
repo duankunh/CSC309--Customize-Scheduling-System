@@ -1,12 +1,17 @@
 
 .table-wrapper {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 80%;
 
+    @media(min-width: 576px) {
+        width: 30rem;
+    }
 }
 
 .contacts-table {
-    margin: 0 auto;
+    width: 100%;
     font-size: 1.4rem;
-    width: 30rem;
 }
 
 .contacts-table__head {
@@ -27,11 +32,12 @@
 }
 
 
-
-
 .contacts-table__pagination {
+    position: sticky;
+    top: 0;
+    left: 0;
     margin: 0 auto;
-    width: 30rem;
+    width: 100%;
     /* background-color: aquamarine; */
     padding: 10px;
     display: flex;
